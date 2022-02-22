@@ -110,14 +110,14 @@ Processing of the data per feed by determining:<br>
 
 ```{r, echo=TRUE, message=FALSE}
 twitter_sample <- twitter_tidy[sample(nrow(twitter_tidy), 500000),]
-news_sample <- news_tidy[sample(nrow(news_tidy), 150000),]
+news_sample <- news_tidy[sample(nrow(news_tidy), 77000),]
 blogs_sample <- blogs_tidy[sample(nrow(blogs_tidy), 150000),]
 feed_tidy <- bind_rows(mutate(twitter_sample, feed = "Twitter"),
                        mutate(news_sample, feed = "News"),
                        mutate(blogs_sample, feed = "Blogs"))
 # Get the count of words per feed, sorted
 feed_words <- feed_tidy %>%
-  count(feed, word, sort = TRUE) %>%
+  count(feed, sort = TRUE) %>%
   ungroup()
 # Get the count of words for each feed
 total_words <- feed_words %>%
