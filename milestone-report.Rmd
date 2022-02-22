@@ -109,7 +109,7 @@ Processing of the data per feed by determining:<br>
 6. Use tf-idf to measure how important the term is to a corpus.  In this case, within the collection of feeds.<br>
 
 ```{r, echo=TRUE, message=FALSE}
-twitter_sample <- twitter_tidy[sample(nrow(twitter_tidy), 150000),]
+twitter_sample <- twitter_tidy[sample(nrow(twitter_tidy), 500000),]
 news_sample <- news_tidy[sample(nrow(news_tidy), 150000),]
 blogs_sample <- blogs_tidy[sample(nrow(blogs_tidy), 150000),]
 feed_tidy <- bind_rows(mutate(twitter_sample, feed = "Twitter"),
