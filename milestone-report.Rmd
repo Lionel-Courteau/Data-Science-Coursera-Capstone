@@ -35,12 +35,18 @@ This project uses tidytext to perform the text processing and will process the l
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(rlang)
 library(dplyr)
 library(tibble)
 library(ggplot2)
 library(stringr)
 library(tokenizers)
-setwd("C:/Users/lione/OneDrive/Documents/Projects/Data-Science-Capstone")
+
+if(!file.exists("Coursera-SwiftKey.zip")) {
+      download.file("https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip", "Coursera-SwiftKey.zip")
+      unzip("Coursera-SwiftKey.zip")
+}
+
 set.seed(1039)
 ```
 ```{r, echo=FALSE}
