@@ -262,8 +262,8 @@ the corpus will be displayed.
 ```{r prepare-the-data-build-corpus, message = FALSE, echo = FALSE}
 library(tm)
 # download bad words file
-badWordsURL <- "https://code.google.com/archive/p/badwordslist/downloads/badwords.txt"
-badWordsFile <- "data/badwords.txt"
+# badWordsURL <- "https://www.freewebheaders.com/full-list-of-bad-words-banned-by-google/base-list-of-bad-words_text-file_2021_01_18.zip"
+badWordsFile <- "data/base-list-of-bad-words_text-file_2021_01_18.txt"
 if (!file.exists('data')) {
     dir.create('data')
 }
